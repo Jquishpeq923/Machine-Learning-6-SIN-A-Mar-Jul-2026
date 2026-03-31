@@ -1,9 +1,11 @@
-{ "name": "ML Workshop 2 - Work Enviroment", 
+{
+    "name": "ML Workshop 2 - Work Enviroment",
     "build": {
-    "dockerfile": "Dockerfile"},
-    "customizations" :{
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
         "vscode": {
-            "extensions": [ 
+            "extensions": [
                 "ms-python.python",
                 "ms-toolsai.jupyter",
                 "ms-toolsai.jupyter-renders",
@@ -12,9 +14,9 @@
             ],
             "settings": {
                 "python.defaultInterpreterPath": "/app/.venv/bin/python",
-                "jupiter.notebookFileRoot": "${workspaceFolder}"
+                "jupyter.notebookFileRoot": "${workspaceFolder}"
             }
         }
     },
-    "postCreateCommand": "echo 'source /app/.venv/bin/activate' >> ~/ .bashrc"
+    "postCreateCommand": "echo 'source /app/.venv/bin/activate' >> ~/.bashrc"
 }
