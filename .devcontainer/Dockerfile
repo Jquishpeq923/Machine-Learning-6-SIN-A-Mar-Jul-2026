@@ -14,11 +14,11 @@ ENV PATH="/root/.local/bin:$PATH"
 
 WORKDIR /app
 
-RUN uv venv .env
+RUN uv venv .venv
 
 COPY requirements.txt .
 
-RUN uv pip install --python .env/bin/python -r requirements.txt
+RUN uv pip install --python .venv/bin/python -r requirements.txt
 
-ENV VIRTUAL_ENV=/app/.env
-ENV PATH="/app/.env/bin:$PATH"
+ENV VIRTUAL_ENV=/app/.venv
+ENV PATH="/app/.venv/bin:$PATH"
