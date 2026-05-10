@@ -1,5 +1,5 @@
 {
-    "name": "ML Workshop 2 - Work Enviroment",
+    "name": "ML Workshop 2 - Work Environment",
     "build": {
         "dockerfile": "Dockerfile"
     },
@@ -9,14 +9,14 @@
                 "ms-python.python",
                 "ms-toolsai.jupyter",
                 "ms-toolsai.jupyter-renders",
-                "charliermarsh.ruff",
-                "ms-azure.vscode-containers"
+                "charliermarsh.ruff"
             ],
             "settings": {
-                "python.defaultInterpreterPath": "/app/.env/bin/python",
+                "python.defaultInterpreterPath": "/app/jose_venv/bin/python",
                 "jupyter.notebookFileRoot": "${workspaceFolder}"
             }
         }
     },
-    "postCreateCommand": "echo 'source /app/.env/bin/activate' >> ~/.bashrc"
+
+    "postCreateCommand": "echo 'source /app/jose_venv/bin/activate' >> ~/.bashrc"
 }
